@@ -1,0 +1,42 @@
+<a href="/movies">Go back</a>
+
+<section>
+
+    {{#each foundMovie}}
+        <img src="{{image}}" alt="{{title}}">
+    {{/each}}
+
+    <div>
+        {{#each foundMovie}}
+            <h2>{{title}}</h2>
+        {{/each}}
+    
+        <h3>Director:</h3>
+            {{#each foundMovie}}
+                {{director}}
+            {{/each}}
+
+
+        <h4>Stars</h4>
+            <ul>
+                {{#each foundMovie}}
+                    {{#each stars}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                {{/each}}
+            </ul>
+
+        {{#each foundMovie}}
+            {{description}}
+        {{/each}}
+
+        <ul>
+            {{#each foundMovie}}
+                {{#each showtimes}}
+                    <li>{{this}}</li>
+                {{/each}}
+            {{/each}}
+        </ul>
+    </div>
+    
+</section>
